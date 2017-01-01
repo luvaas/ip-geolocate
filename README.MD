@@ -13,20 +13,22 @@ Note that freegeoip.net allows up to 10,000 queries per hour. Once this limit is
 # Usage
 The getLocation method requires an IP address (as a string) and a callback.  Note that the method will check for IP address validity and that both IPv4 and IPv6 IP addresses are supported.
 
-    var geolocate = require('ip-geolocate');
+```javascript
+var geolocate = require('ip-geolocate');
 
-    var ip = '127.0.0.1';
+var ip = '127.0.0.1';
 
-    geolocate.getLocation(ip, function(err, location) {
-        if(err) {
-            // Error occurred, latency threshold hit, or IP address is invalid
-            console.log(err);
-        }
-        else {
-            // Success
-           console.log(location);
-        }
-    });
+geolocate.getLocation(ip, function(err, location) {
+    if(err) {
+        // Error occurred, latency threshold hit, or IP address is invalid
+        console.log(err);
+    }
+    else {
+        // Success
+       console.log(location);
+    }
+});
+```
 
 # Optional Options Argument
 
@@ -37,26 +39,29 @@ You can (optionally) pass an options object as the second argument.
 
 ## Example
 
-    var geolocate = require('ip-geolocate');
+```javascript
+var geolocate = require('ip-geolocate');
 
-    var ip = '127.0.0.1';
-    var options = {
-        maxLatency : 5000,
-        serviceUrl : 'http://alternetfreegeoip.net/json/'
+var ip = '127.0.0.1';
+var options = {
+    maxLatency : 5000,
+    serviceUrl : 'http://alternetfreegeoip.net/json/'
+}
+
+geolocate.getLocation(ip, options, function(err, location) {
+    if(err) {
+        console.log(err);
     }
-
-    geolocate.getLocation(ip, options, function(err, location) {
-        if(err) {
-            console.log(err);
-        }
-        else {
-           console.log(location);
-        }
-    });
+    else {
+       console.log(location);
+    }
+});
+```
 
 # Response
 The method will return a _location_ object in the callback that will look something like this:
 
+```javascript
     {
         'Country'           : 'United States',
         'Region'            : 'California',
@@ -66,4 +71,5 @@ The method will return a _location_ object in the callback that will look someth
         'Metro code'        : '807',
         'Time zone'         : 'America/Los_Angeles'
     }
+```
 
