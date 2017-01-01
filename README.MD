@@ -35,6 +35,8 @@ You can (optionally) pass an options object as the second argument.
 * __maxLatency__: By default, the max time to wait for a response from freegeoip.net service is 2000 milliseconds.  Change this to whatever you want.
 * __serviceUrl__: By default the serviceUrl is set to "http://freegeoip.net/json/".  However, you may decide to install your own service on your own servers if the 10,000 request limit is too restrictive (see freegeoip.net documentation for more info).  If so, include the URL of your service here, including the protocol (e.g., http://) and trailing slash.
 
+## Example
+
     var geolocate = require('ip-geolocate');
 
     var ip = '127.0.0.1';
