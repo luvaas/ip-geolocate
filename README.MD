@@ -62,14 +62,18 @@ geolocate.getLocation(ip, options, function(err, location) {
 The method will return a _location_ object in the callback that will look something like this:
 
 ```javascript
-    {
-        'Country'           : 'United States',
-        'Region'            : 'California',
-        'City'              : 'San Mateo'
-        'Zip/Postal code'   : '94403',
-        'Lat/Long'          : '37.5402, -122.3041',
-        'Metro code'        : '807',
-        'Time zone'         : 'America/Los_Angeles'
-    }
+{
+    ip: '127.0.0.1',
+    country_code: 'US',
+    country_name: 'United States',
+    region_code: 'CA',
+    region_name: 'California',
+    city: 'San Mateo',
+    zip_code: '94403',
+    time_zone: 'AmericaLos_Angeles',
+    latitude: 37.5402,
+    longitude: -122.3041,
+    metro_code: 807
+}
 ```
 
