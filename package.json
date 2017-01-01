@@ -1,0 +1,37 @@
+{
+  "name": "ip-geolocate",
+  "version": "1.0.0",
+  "description": "This module uses freegeoip.net to attempt to determine geolocation based on IP address.",
+  "main": "./lib/index",
+  "scripts": {
+    "test": "mocha -u tdd -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/luvaas/ip-geolocate.git"
+  },
+  "keywords": [
+    "geolocate",
+    "geolocation",
+    "freegeoip",
+    "ip-geolocate",
+    "ip-geolocation",
+    "ip"
+  ],
+  "author": "Darren Luvaas",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "dependencies": {
+    "ip-regex": "^1.0.3",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/luvaas/ip-geolocate/issues"
+  },
+  "homepage": "https://github.com/luvaas/ip-geolocate#readme"
+}
