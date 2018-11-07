@@ -1,7 +1,7 @@
 {
   "name": "ip-geolocate",
-  "version": "1.0.0",
-  "description": "This module uses freegeoip.net to attempt to determine geolocation based on IP address.",
+  "version": "2.0.0",
+  "description": "This module uses ipinfo.io to determine geolocation based on IP address.",
   "main": "./lib/index",
   "scripts": {
     "test": "mocha -u tdd -R spec"
@@ -13,10 +13,10 @@
   "keywords": [
     "geolocate",
     "geolocation",
-    "freegeoip",
     "ip-geolocate",
     "ip-geolocation",
-    "ip"
+    "ip",
+    "ipinfo"
   ],
   "author": "Darren Luvaas",
   "license": "MIT",
